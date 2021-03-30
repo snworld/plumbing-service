@@ -1,0 +1,387 @@
+<!-- 
+TECH LIST
+-HTML Template
+-Tailwind CSS Framework
+-mertJF Tailblocks
+-Swiper JS Slider
+-Viewer JS Plugin
+-Freepik, Unsplash, Pixabay Images
+-Ionicons Icons
+-Flaticon Icons
+-Google Images
+-Google Fonts
+DETAILS
+-9 pages
+-Responsive
+-Static
+-Serverless
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="img/logo.svg">
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.1/swiper-bundle.min.css" integrity="sha512-9jHQDsbLwicj+F+cW4hfD0UBCiLMfnFFN99OUMbt03OmhbeJptdEZbaeGnmFZ0jIoWtbFsEav3P3x9Ge9t4z5w==" crossorigin="anonymous" />
+	<link rel="stylesheet" href="style.css">
+	<title>Plumbing Service</title>
+</head>
+<body>
+
+	<header class="text-gray-600 body-font my-2">
+		<div class="container px-2 sm:px-1 pt-2 pb-3 flex justify-between mx-auto">
+			<a href="#!" class="font-medium tex2t-sm hover:text-blue-600 transition duration-900 ease-in-out">+987654323</a>
+			<a href="#!" class="font-medium text-sm hover:text-blue-600 transition duration-900 ease-in-out">company@gmail.com</a>
+		</div>
+		<hr class="w-full border-gray-200">
+	  <div class="container px-2 sm:px-1 mx-auto">
+			<div class="mx-auto flex flex-wrap justify-center lg:justify-between py-3 lg:py-0 flex-col lg:flex-row items-center">
+				<a href="index.html" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+					<ion-icon name="construct-outline" size="large" class="text-blue-600"></ion-icon>
+					<span class="ml-3 text-xl font-semibold text-blue-600">Plumbing Service</span>
+				</a>
+				<div class="flex flex-wrap justify-center lg:my-4">
+					<nav class="flex items-center text-base flex-col sm:flex-row">
+	
+						<div @click.away="open = false" class="relative" x-data="{ open: false }">
+							<button @click="open = !open" class="my-2 sm:my-1 uppercase mr-2 font-semibold text-sm text-blue-600 hover:text-blue-600 focus:outline-none">
+								Services
+								<svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1 rotate-0"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+							</button>
+							<div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute z-50 left-0 w-80 md:max-w-screen-sm md:w-screen mt-2 origin-top-left bg-white" style="display: none;">
+								<div class="origin-top-left absolute left-0 mt-2 w-auto rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+									<div class="py-1 hover:bg-gray-100">
+										<a href="drainage.html" class="block px-4 pr-6 py-2 text-sm text-gray-700 font-medium hover:text-blue-800" role="menuitem">
+											<ion-icon name="hammer-outline" class="inline-block mr-1" style="vertical-align: middle; font-size: 25px;"></ion-icon>
+											Drainage Services
+										</a> 
+									</div>
+									 <div class="py-1 hover:bg-gray-100">
+										<a href="water-supply.html" class="block px-4 pr-6 py-2 text-sm text-gray-700 font-medium hover:text-blue-800" role="menuitem">
+											<ion-icon name="water-outline" class="inline-block mr-1" style="vertical-align: middle; font-size: 25px;"></ion-icon>
+											Water Supply
+										</a>
+									</div>
+									<div class="py-1 hover:bg-gray-100">
+										<a href="gas-plumbing.html" class="block px-4 pr-6 py-2 text-sm text-gray-700 font-medium hover:text-blue-800" role="menuitem">
+											<ion-icon name="build-outline" class="inline-block mr-1" style="vertical-align: middle; font-size: 25px;"></ion-icon>
+											Gas Plumbing 
+										</a>
+									</div>
+									<div class="py-1 hover:bg-gray-100">
+										<a href="mechanical.html" class="block px-4 pr-6 py-2 text-sm text-gray-700 font-medium hover:text-blue-800" role="menuitem">
+											<ion-icon name="settings-outline" class="inline-block mr-1" style="vertical-align: middle; font-size: 25px;"></ion-icon>
+											Mechanical Services
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+		
+						<a href="team.html" class="mx-5 my-2 sm:my-1 uppercase font-semibold text-sm text-dark-600 hover:text-blue-600">Team</a>
+						<a href="about.html" class="mx-5 my-2 sm:my-1 uppercase font-semibold text-sm text-dark-600 hover:text-blue-600">About</a>
+						<a href="contact.html" class="mx-5 my-2 sm:my-1 uppercase mr-8 font-semibold text-sm text-dark-600 hover:text-blue-600">Contact</a>
+						<button class="inline-flex items-center rounded-lg shadow-md bg-blue-600 text-white border-0 py-1 px-3 focus:outline-none hover:bg-blue-700 rounded text-base my-3 sm:my-2">
+							<a href="request.html">Request</a>
+						</button>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Slider -->
+	<section>
+		<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	      <div class="swiper-slide" style="background: url(./img/1.jpg) no-repeat; background-size: 100%; height: 500px; position: relative;">
+	      	<div class="text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+		      	<h1 style="text-shadow: 0 0 8px #000;" class="text-lg text-5xl font-bold text-white uppercase">Plumbing Service</h1>
+		      	<p style="text-shadow: 0 0 8px #000;" class="text-white my-2 text-md">Get your sink tube issue solved quickly and effectively with us</p>
+		      	<button class="inline-flex items-center rounded-lg shadow-md bg-blue-600 text-white border-0 py-2 px-4 focus:outline-none hover:bg-blue-700 rounded text-base mt-8">
+			      	<a href="request.html">Request a service</a>
+		      	</button>
+	      	</div>
+	      </div>
+	      <div class="swiper-slide" style="background: url(./img/2.jpg) no-repeat; background-size: 100%; height: 500px; position: relative;">
+	      	<div class="text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+		      	<h1 style="text-shadow: 0 0 8px #000;" class="text-lg text-5xl font-bold text-white uppercase">High Quality Works</h1>
+		      	<p style="text-shadow: 0 0 8px #000;" class="text-white my-2 text-md">We are dedicated to build and solve every problem occured in water supply systems, mechanism of tubes, gas deliveries and much more</p>
+		      	<button class="inline-flex items-center rounded-lg shadow-md bg-blue-600 text-white border-0 py-2 px-4 focus:outline-none hover:bg-blue-700 rounded text-base my-4">
+			      	<a href="request.html">Request a service</a>
+		      	</button>
+	      	</div>
+	      </div>
+	      <div class="swiper-slide" style="background: url(./img/3.jpg) no-repeat; background-size: 100%; height: 500px;">
+	      	<div class="text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+		      	<h1 style="text-shadow: 0 0 8px #000;" class="text-lg text-5xl font-bold text-white uppercase">Great Plumbers</h1>
+		      	<p style="text-shadow: 0 0 8px #000;" class="text-white my-2 text-md">Our team is always ready to give the assistance you need</p>
+		      	<button class="inline-flex items-center rounded-lg shadow-md bg-blue-600 text-white border-0 py-2 px-4 focus:outline-none hover:bg-blue-700 rounded text-base my-4">
+			      	<a href="request.html">Request a service</a>
+		      	</button>
+	      	</div>
+	      </div>
+	    </div>
+	    <div class="swiper-pagination"></div>
+	    <div class="swiper-button-prev" style="color: white;"></div>
+		  <div class="swiper-button-next" style="color: white;"></div>
+	  </div>
+	</section>
+
+	<!-- Request a plumber -->
+	<section>
+		<div class="container p-2 sm:p-1 mx-auto">
+			<div class="text-center my-10">
+				<div class="flex flex-col mb-8">
+					<h3 class="text-2xl uppercase font-semibold text-gray-800">Got a Plumbing Problem?</h3>
+					<h5 class="text-gray-600">Request a plumber in your area</h5>
+				</div>
+				<div class="my-4">
+					<button class="inline-flex items-center rounded-lg shadow-md bg-blue-600 text-white border-0 py-1 px-3 focus:outline-none hover:bg-blue-700 rounded text-base my-4 sm:my-2">
+						<a href="#!">Request a Plumber</a>
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Services -->
+	<section class="bg-gray-100 py-5">
+		<div class="container p-2 sm:p-1 mx-auto my-10">
+			<div class="flex flex-col text-center mb-10">
+				<h3 class="text-2xl uppercase font-semibold text-gray-800">Our Services</h3>
+				<h5 class="text-gray-600">The main services we do</h5>
+			</div>
+			<div class="flex flex-col flex-wrap md:flex-row w-5/6 mx-auto my-8">
+				<div class="p-4 md:w-1/2 sm:mb-0 mb-6 text-center">
+					<div class="rounded-lg h-64 overflow-hidden">
+						<a href="drainage.html">
+							<img alt="content" class="object-cover object-center h-full w-full" src="img/drainage.jpg">
+						</a>
+					</div>
+					<h2 class="text-xl font-medium title-font text-gray-800 mt-5">Drainage Services</h2>
+				</div>
+				<div class="p-4 md:w-1/2 sm:mb-0 mb-6 text-center">
+					<div class="rounded-lg h-64 overflow-hidden">
+						<a href="water-supply.html">
+							<img alt="content" class="object-cover object-center h-full w-full" src="img/water.jpg">
+						</a>
+					</div>
+					<h2 class="text-xl font-medium title-font text-gray-800 mt-5">Water Supply</h2>
+				</div>
+				<div class="p-4 md:w-1/2 sm:mb-0 mb-6 text-center">
+					<div class="rounded-lg h-64 overflow-hidden">
+						<a href="gas-plumbing.html">
+							<img alt="content" class="object-cover object-center h-full w-full" src="img/gas.jpg">
+						</a>
+					</div>
+					<h2 class="text-xl font-medium title-font text-gray-800 mt-5">Gas Plumbing</h2>
+				</div>
+				<div class="p-4 md:w-1/2 sm:mb-0 mb-6 text-center">
+					<div class="rounded-lg h-64 overflow-hidden">
+						<a href="mechanical.html">
+							<img alt="content" class="object-cover object-center h-full w-full" src="img/mechanical.jpg">
+						</a>
+					</div>
+					<h2 class="text-xl font-medium title-font text-gray-800 mt-5">Mechanical Services</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- What do we do? -->
+	<section class="py-5">	
+		<div class="container p-2 sm:p-1 mx-auto my-10">
+			<div class="flex flex-col text-center mb-10">
+				<h3 class="text-2xl uppercase font-semibold">What do we do?</h3>
+			</div>	
+			<div class="flex flex-wrap justify-center flex-col md:flex-row">
+				
+				<div class="m-10">
+					<div class="flex flex-col items-center">
+						<svg width="100" height="100" x="0" y="0" viewBox="0 0 64 64" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+							<g><g xmlns="http://www.w3.org/2000/svg" id="Wrench"><g fill="#9bc9ff"><path d="m39.778 60.991-1.414-1.414 16.971-16.97 5.656 5.656.009 12.737z" fill="#ffffff" data-original="#9bc9ff" style="" class=""/><path d="m33.991 27.18.13-.13-.707-.707a2.951 2.951 0 0 1 .577.837z" fill="#ffffff" data-original="#9bc9ff" style="" class=""/><path d="m31.293 24.222 2.121 2.121z" fill="#ffffff" data-original="#9bc9ff" style="" class=""/><path d="m30.009 31.163a2.957 2.957 0 0 1 -.837-.577l-2.122-2.122 2.829 2.829z" fill="#ffffff" data-original="#9bc9ff" style="" class=""/><path d="m50.33 23.044a9.986 9.986 0 0 0 9.906-13.623l-6.477 6.479-4.95-.707-.707-4.95 6.477-6.477a9.986 9.986 0 0 0 -13.623 9.904 1.933 1.933 0 0 1 -.583 1.472l-4.837 4.837 2.828 2.829.707-.708a3 3 0 0 1 4.243 0l3.538 3.533 2.006-2.006a1.933 1.933 0 0 1 1.472-.583z" fill="#ffffff" data-original="#9bc9ff" style="" class=""/></g><path d="m39.778 29.879a4 4 0 0 1 -5.657 0 1.767 1.767 0 0 1 -.121-.145 2.957 2.957 0 0 1 -.59.852 2.99 2.99 0 0 1 -3.405.577l-.13.13.707.707a3 3 0 0 1 0 4.243 3 3 0 0 1 -4.243 0l.707.707a3 3 0 0 1 -4.242 4.242l-1.415-1.414-2.824-2.828-3.579 3.579a1.947 1.947 0 0 1 -1.48.581c-.2-.012-.4-.017-.6-.017a10 10 0 1 0 10 10c0-.2 0-.4-.017-.6a1.947 1.947 0 0 1 .581-1.48l3.579-3.579 11.315-11.313 4.243-4.242a2 2 0 0 0 -2.829 0zm-25.378 26.79-5.574-1.495-1.495-5.574 4.083-4.083 5.577 1.494 1.494 5.577z" fill="#ffffff" data-original="#9bc9ff" style="" class=""/><path d="m33.991 27.18.009.02c.041-.05.076-.1.122-.15z" fill="#ffffff" data-original="#9bc9ff" style="" class=""/><path d="m17.957 46.75a1 1 0 0 0 -.707-.707l-5.577-1.494a1 1 0 0 0 -.966.259l-4.082 4.083a1 1 0 0 0 -.259.965l1.494 5.577a1 1 0 0 0 .707.707l5.577 1.494a.989.989 0 0 0 .258.034 1 1 0 0 0 .707-.293l4.083-4.082a1 1 0 0 0 .259-.966zm-3.853 8.8-4.462-1.2-1.195-4.45 3.266-3.266 4.461 1.2 1.2 4.461z" fill="#2563eb" data-original="#1e81ce" style="" class=""/><path d="m61.7 47.56-5.66-5.66a.99.99 0 0 0 -.71-.29.967.967 0 0 0 -.7.29l-.68.68a9.011 9.011 0 0 1 -2.15-4.91l-.72-6.42a9.053 9.053 0 0 0 -2.57-5.38l-.24-.24 1.29-1.3a.935.935 0 0 1 .71-.29 10.982 10.982 0 0 0 10.9-14.98 1 1 0 0 0 -1.64-.35l-6.12 6.13-3.72-.53-.53-3.72 6.13-6.12a.991.991 0 0 0 .27-.91 1.015 1.015 0 0 0 -.62-.73 10.982 10.982 0 0 0 -14.98 10.9.974.974 0 0 1 -.29.71l-4.13 4.13-2.83-2.83a3.981 3.981 0 0 0 -6.8 2.5 3.967 3.967 0 0 0 -4.55 5.62 3.9 3.9 0 0 0 -2.09 1.07 3.976 3.976 0 0 0 -1.02 3.84 3.959 3.959 0 0 0 -2.51 6.77l1.41 1.41-2.87 2.87a.95.95 0 0 1 -.72.29c-.22-.01-.43-.01-.66-.02a11 11 0 0 0 -.01 22h.03a10.994 10.994 0 0 0 10.99-11c0-.22-.01-.44-.02-.65a.929.929 0 0 1 .29-.72l2.87-2.87 11.32 11.31-.71.71a1 1 0 0 0 -.3.71.976.976 0 0 0 .3.7l1.41 1.42a1.024 1.024 0 0 0 .71.29 1.042 1.042 0 0 0 .71-.29 1.008 1.008 0 0 0 0-1.42l-.71-.7 15.55-15.56 4.95 4.95a1.008 1.008 0 0 0 1.42 0 1 1 0 0 0 0-1.41zm-20.62-31.71a2.914 2.914 0 0 0 .87-2.24 8.994 8.994 0 0 1 10.73-9.36l-5.28 5.28a1.008 1.008 0 0 0 -.29.85l.71 4.95a1 1 0 0 0 .85.85l4.95.71a1.008 1.008 0 0 0 .85-.29l5.28-5.28a8.994 8.994 0 0 1 -9.36 10.73 2.927 2.927 0 0 0 -2.24.87l-1.3 1.3-2.83-2.83a4.1 4.1 0 0 0 -5.66 0l-1.41-1.41zm-12.62 1.3a2.061 2.061 0 0 1 2.83 0l5.66 5.66-2.83 2.83-5.66-5.66a2.013 2.013 0 0 1 0-2.83zm-4.95 3.54a2.041 2.041 0 0 1 2.83 0l6.37 6.36.12.15a2.95 2.95 0 0 0 0 2.53l-.12.15a2.061 2.061 0 0 1 -2.83 0l-2.48-2.48-3.89-3.89a1.992 1.992 0 0 1 0-2.82zm-2.82 5.65a2 2 0 0 1 2.82 0l2.48 2.48 2.47 2.47h.01l1.41 1.42a2 2 0 0 1 -2.83 2.83l-5.66-5.66-.7-.71a2 2 0 0 1 0-2.83zm-4.13 6.37a1.989 1.989 0 0 1 .59-1.42 2.016 2.016 0 0 1 1.41-.58 1.98 1.98 0 0 1 1.42.58l5.66 5.66.7.71a2 2 0 1 1 -2.83 2.83l-6.36-6.37a1.983 1.983 0 0 1 -.59-1.41zm23.22 24.04-11.32-11.31 10.61-10.61a1.008 1.008 0 0 0 0-1.42 1 1 0 0 0 -1.41 0l-14.9 14.9a2.936 2.936 0 0 0 -.87 2.24c.01.18.02.36.02.54a9 9 0 0 1 -8.99 9h-.03a9 9 0 0 1 .01-18c.15 0 .37.01.55.02a2.973 2.973 0 0 0 2.24-.87l2.87-2.88 3.54 3.54a3.988 3.988 0 0 0 6.69-3.81 3.959 3.959 0 0 0 3.26-5.7 3.919 3.919 0 0 0 2.07-1.1c.03-.02.04-.05.07-.07a5.019 5.019 0 0 0 6.3-.63 1.014 1.014 0 0 1 1.41 0 .967.967 0 0 1 .29.7.99.99 0 0 1 -.29.71l-.71.71a7.007 7.007 0 0 0 0 9.9l.71.7a.978.978 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.7-.71a5 5 0 0 1 0-7.07l.7-.71a2.994 2.994 0 0 0 0-4.24 3.075 3.075 0 0 0 -4.24 0 3 3 0 0 1 -4.24 0 1 1 0 0 1 0-1.41l4.95-4.95a2.041 2.041 0 0 1 2.83 0l4.48 4.47a7.131 7.131 0 0 1 2.01 4.19l.72 6.42a11.037 11.037 0 0 0 2.71 6.1z" fill="#2563eb" data-original="#1e81ce" style="" class=""/></g></g>
+						</svg>
+						<h3 class="font-medium text-md text-gray-800 my-5 mb-4">Installation</h3>
+						<p class="text-gray-600 text-center text-sm border p-3 border-gray-300 rounded-md w-60">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem est vitae fugiat sit quod velit voluptate sint.</p>
+					</div>
+				</div>
+
+				<div class="m-10">
+					<div class="flex flex-col items-center">
+						<svg width="100" height="100" x="0" y="0" viewBox="0 0 64 64" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+							<g><g xmlns="http://www.w3.org/2000/svg" id="Tool_Box" data-name="Tool Box"><path d="m46 38h-4v-5h-20v5h-4v-5h-11v26a2 2 0 0 0 2 2h46a2 2 0 0 0 2-2v-26h-11zm4.65 9h-6.65l-1 2.047 1 1.953h6.65a5.99 5.99 0 0 1 -10.328 1.751 1.986 1.986 0 0 0 -1.552-.751h-13.538a2.023 2.023 0 0 0 -1.571.772 6 6 0 1 1 .017-7.523 1.986 1.986 0 0 0 1.552.751h13.54a1.986 1.986 0 0 0 1.552-.751 5.99 5.99 0 0 1 10.328 1.751z" fill="#ffffff" data-original="#9bc9ff" style="" class=""/><path d="m59 15h-54a2 2 0 0 0 -2 2v16h15v-3a2 2 0 0 1 4 0v3h20v-3a2 2 0 0 1 4 0v3h15v-16a2 2 0 0 0 -2-2z" fill="#ffffff" data-original="#9bc9ff" style="" class=""/><path d="m17.5 46.402-1.5 2.598 1.5 2.598h3l1.5-2.598-1.5-2.598z" fill="#ffffff" data-original="#9bc9ff" style="" class=""/><g fill="#1e81ce"><path d="m59 14h-12v-3a9.014 9.014 0 0 0 -9-9h-12a9.014 9.014 0 0 0 -9 9v3h-12a3.009 3.009 0 0 0 -3 3v16a1 1 0 0 0 1 1h3v25a3.009 3.009 0 0 0 3 3h46a3.009 3.009 0 0 0 3-3v-25h3a1 1 0 0 0 1-1v-16a3.009 3.009 0 0 0 -3-3zm-40-3a7.008 7.008 0 0 1 7-7h12a7.008 7.008 0 0 1 7 7v3h-2v-3a5 5 0 0 0 -5-5h-12a5 5 0 0 0 -5 5v3h-2zm22 0v3h-18v-3a3.009 3.009 0 0 1 3-3h12a3.009 3.009 0 0 1 3 3zm15 48a1 1 0 0 1 -1 1h-46a1 1 0 0 1 -1-1v-25h9v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-4h18v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-4h9zm-37-22v-7a1 1 0 0 1 2 0v7zm24 0v-7a1 1 0 0 1 2 0v7zm17-5h-13v-2a3 3 0 0 0 -6 0v2h-18v-2a3 3 0 0 0 -6 0v2h-13v-15a1 1 0 0 1 1-1h54a1 1 0 0 1 1 1z" fill="#2563eb" data-original="#1e81ce" style="" class=""/><path d="m50.65 50h-6.04l-.49-.96.5-1.04h6.03a1.028 1.028 0 0 0 .82-.42 1.01 1.01 0 0 0 .12-.91 6.991 6.991 0 0 0 -12.05-2.05.981.981 0 0 1 -.77.38h-13.54a.981.981 0 0 1 -.77-.38 7 7 0 0 0 -12.41 5.22 7.067 7.067 0 0 0 5.83 6.07 7.268 7.268 0 0 0 1.13.09 6.93 6.93 0 0 0 5.43-2.6 1.024 1.024 0 0 1 .79-.4h13.54a.981.981 0 0 1 .77.38 6.991 6.991 0 0 0 12.05-2.05 1.01 1.01 0 0 0 -.12-.91 1.028 1.028 0 0 0 -.82-.42zm-5.65 4a4.988 4.988 0 0 1 -3.9-1.87 2.957 2.957 0 0 0 -2.33-1.13h-13.54a3.05 3.05 0 0 0 -2.35 1.14 4.968 4.968 0 0 1 -4.69 1.8 5.04 5.04 0 0 1 -4.15-4.33 5 5 0 0 1 8.86-3.74 2.957 2.957 0 0 0 2.33 1.13h13.54a2.957 2.957 0 0 0 2.33-1.13 5 5 0 0 1 7.9.13h-5a1.012 1.012 0 0 0 -.9.56l-1 2.05a1 1 0 0 0 .01.89l1 1.96a1 1 0 0 0 .89.54h5a5 5 0 0 1 -4 2z" fill="#2563eb" data-original="#1e81ce" style="" class=""/><path d="m21.366 45.9a1 1 0 0 0 -.866-.5h-3a1 1 0 0 0 -.866.5l-1.5 2.6a1 1 0 0 0 0 1l1.5 2.6a1 1 0 0 0 .866.5h3a1 1 0 0 0 .866-.5l1.5-2.6a1 1 0 0 0 0-1zm-1.443 4.7h-1.846l-.922-1.6.922-1.6h1.846l.922 1.6z" fill="#2563eb" data-original="#1e81ce" style="" class=""/><path d="m38 48h-12a1 1 0 0 0 0 2h12a1 1 0 0 0 0-2z" fill="#2563eb" data-original="#1e81ce" style="" class=""/></g></g></g>
+						</svg>
+						<h3 class="font-medium text-md text-gray-800 my-5 mb-4">Maintenance</h3>
+						<p class="text-gray-600 text-center text-sm border p-3 border-gray-300 rounded-md w-60">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem est vitae fugiat sit quod velit voluptate sint.</p>
+					</div>
+				</div>
+
+				<div class="m-10">
+					<div class="flex flex-col items-center">
+						<svg width="100" height="100" x="0" y="0" viewBox="0 0 64 64" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+							<g><g xmlns="http://www.w3.org/2000/svg" id="Setting"><path d="M51.55,18.1l3.78-3.78L49.68,8.67,45.9,12.45A23.662,23.662,0,0,0,36,8.34V3H28V8.34a23.662,23.662,0,0,0-9.9,4.11L14.32,8.67,8.67,14.32l3.78,3.78A23.662,23.662,0,0,0,8.34,28H3v8H8.34a23.662,23.662,0,0,0,4.11,9.9L8.67,49.68l5.65,5.65,3.78-3.78A23.662,23.662,0,0,0,28,55.66V61h8V55.66a23.662,23.662,0,0,0,9.9-4.11l3.78,3.78,5.65-5.65L51.55,45.9A23.662,23.662,0,0,0,55.66,36H61V28H55.66A23.662,23.662,0,0,0,51.55,18.1ZM32,51A19,19,0,1,1,51,32,19,19,0,0,1,32,51Z" style="" fill="#ffffff" data-original="#9bc9ff" class=""/><path d="M41.9,24.929l-2.121-.707L39.071,22.1l2.539-2.538a5.012,5.012,0,0,0-6.492,6.491l-9.065,9.065a5.012,5.012,0,0,0-6.491,6.492L22.1,39.071l2.121.707.707,2.121L22.39,44.438a5.012,5.012,0,0,0,6.492-6.491l9.065-9.065a5.012,5.012,0,0,0,6.491-6.492Z" style="" fill="#ffffff" data-original="#9bc9ff" class=""/><path d="M22.1,24.929l2.121-.707.707-2.122L22.39,19.562a5.012,5.012,0,0,1,6.492,6.491l9.065,9.065a5.012,5.012,0,0,1,6.491,6.492L41.9,39.071l-2.121.707L39.071,41.9l2.539,2.539a5.012,5.012,0,0,1-6.492-6.491l-9.065-9.065a5.012,5.012,0,0,1-6.491-6.492Z" style="" fill="#ffffff" data-original="#9bc9ff" class=""/><path d="M32,12A20,20,0,1,0,52,32,20.02,20.02,0,0,0,32,12Zm0,38A18,18,0,1,1,50,32,18.021,18.021,0,0,1,32,50Z" style="" fill="#2563eb" data-original="#1e81ce" class=""/><path d="M61,27H56.49a24.4,24.4,0,0,0-3.64-8.78l3.19-3.19a1.052,1.052,0,0,0,.29-.71,1.033,1.033,0,0,0-.29-.71L50.39,7.96a1.047,1.047,0,0,0-1.42,0l-3.19,3.19A24.4,24.4,0,0,0,37,7.51V3a1,1,0,0,0-1-1H28a1,1,0,0,0-1,1V7.51a24.4,24.4,0,0,0-8.78,3.64L15.03,7.96a1.014,1.014,0,0,0-1.42,0L7.96,13.61a1.033,1.033,0,0,0-.29.71,1.052,1.052,0,0,0,.29.71l3.19,3.19A24.4,24.4,0,0,0,7.51,27H3a1,1,0,0,0-1,1v8a1,1,0,0,0,1,1H7.51a24.4,24.4,0,0,0,3.64,8.78L7.96,48.97a1.052,1.052,0,0,0-.29.71,1.033,1.033,0,0,0,.29.71l5.65,5.65a1.047,1.047,0,0,0,1.42,0l3.19-3.19A24.4,24.4,0,0,0,27,56.49V61a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V56.49a24.4,24.4,0,0,0,8.78-3.64l3.19,3.19a1.014,1.014,0,0,0,1.42,0l5.65-5.65a1.033,1.033,0,0,0,.29-.71,1.052,1.052,0,0,0-.29-.71l-3.19-3.19A24.4,24.4,0,0,0,56.49,37H61a1,1,0,0,0,1-1V28A1,1,0,0,0,61,27Zm-1,8H55.66a1,1,0,0,0-.99.83,22.47,22.47,0,0,1-3.93,9.49,1,1,0,0,0,.1,1.29l3.08,3.07-4.24,4.24-3.07-3.08a1,1,0,0,0-1.29-.1,22.47,22.47,0,0,1-9.49,3.93,1,1,0,0,0-.83.99V60H29V55.66a1,1,0,0,0-.83-.99,22.47,22.47,0,0,1-9.49-3.93,1,1,0,0,0-1.29.1l-3.07,3.08-4.24-4.24,3.08-3.07a1,1,0,0,0,.1-1.29,22.47,22.47,0,0,1-3.93-9.49A1,1,0,0,0,8.34,35H4V29H8.34a1,1,0,0,0,.99-.83,22.47,22.47,0,0,1,3.93-9.49,1,1,0,0,0-.1-1.29l-3.08-3.07,4.24-4.24,3.07,3.08a1,1,0,0,0,1.29.1,22.47,22.47,0,0,1,9.49-3.93A1,1,0,0,0,29,8.34V4h6V8.34a1,1,0,0,0,.83.99,22.47,22.47,0,0,1,9.49,3.93,1,1,0,0,0,1.29-.1l3.07-3.08,4.24,4.24-3.08,3.07a1,1,0,0,0-.1,1.29,22.47,22.47,0,0,1,3.93,9.49,1,1,0,0,0,.99.83H60Z" style="" fill="#2563eb" data-original="#1e81ce" class=""/><path d="M38.23,33.98,36.24,32l1.98-1.98a6.012,6.012,0,0,0,7.15-7.99,1,1,0,0,0-1.64-.35l-2.1,2.1-1.06-.35-.35-1.06,2.1-2.1a1,1,0,0,0,.27-.92.983.983,0,0,0-.62-.72,6.012,6.012,0,0,0-7.99,7.15L32,27.76l-1.98-1.99a6,6,0,0,0-7.99-7.14,1,1,0,0,0-.35,1.64l2.11,2.1-.36,1.06-1.06.36-2.1-2.11a1,1,0,0,0-1.64.35,6,6,0,0,0,7.14,7.99L27.76,32l-1.98,1.98a6.012,6.012,0,0,0-7.15,7.99,1,1,0,0,0,1.64.35l2.1-2.1,1.06.35.35,1.06-2.1,2.1a1,1,0,0,0-.27.92.983.983,0,0,0,.62.72,6.146,6.146,0,0,0,2.18.41,6.013,6.013,0,0,0,5.81-7.56L32,36.24l1.98,1.99a6,6,0,0,0,5.82,7.55,6.093,6.093,0,0,0,2.17-.41,1,1,0,0,0,.35-1.64l-2.11-2.1.36-1.06,1.06-.36,2.1,2.11a1,1,0,0,0,1.64-.35,6,6,0,0,0-7.14-7.99ZM26.76,28.17a1.007,1.007,0,0,0-1.07-.22,4.015,4.015,0,0,1-5.46-3.47l1.16,1.16a1.007,1.007,0,0,0,1.03.24l2.12-.71a1.011,1.011,0,0,0,.63-.63l.71-2.12a1.007,1.007,0,0,0-.24-1.03l-1.16-1.16a4.015,4.015,0,0,1,3.47,5.46.988.988,0,0,0,.22,1.07l2.42,2.41-1.42,1.42Zm1.41,9.07a1.026,1.026,0,0,0-.22,1.07,4.043,4.043,0,0,1-.9,4.3,3.993,3.993,0,0,1-2.58,1.16l1.17-1.16a1.028,1.028,0,0,0,.24-1.03l-.71-2.12a.989.989,0,0,0-.63-.63l-2.12-.71a1.185,1.185,0,0,0-.32-.05,1.007,1.007,0,0,0-.71.29l-1.16,1.17a3.993,3.993,0,0,1,1.16-2.58,4.047,4.047,0,0,1,4.3-.9,1.026,1.026,0,0,0,1.07-.22l9.07-9.07a1.026,1.026,0,0,0,.22-1.07,4.043,4.043,0,0,1,.9-4.3,3.993,3.993,0,0,1,2.58-1.16l-1.17,1.16a1.028,1.028,0,0,0-.24,1.03l.71,2.12a.989.989,0,0,0,.63.63l2.12.71a1.028,1.028,0,0,0,1.03-.24l1.16-1.17a3.993,3.993,0,0,1-1.16,2.58,4.047,4.047,0,0,1-4.3.9,1.026,1.026,0,0,0-1.07.22Zm14.44,1.12a1.007,1.007,0,0,0-1.03-.24l-2.12.71a1.011,1.011,0,0,0-.63.63l-.71,2.12a1.007,1.007,0,0,0,.24,1.03l1.16,1.16a4.015,4.015,0,0,1-3.47-5.46.988.988,0,0,0-.22-1.07l-2.42-2.41,1.42-1.42,2.41,2.42a.988.988,0,0,0,1.07.22,4.015,4.015,0,0,1,5.46,3.47Z" fill="#2563eb" data-original="#1e81ce" class=""/></g></g>
+						</svg>
+						<h3 class="font-medium text-md text-gray-800 my-5 mb-4">Extraction</h3>
+						<p class="text-gray-600 text-center text-sm border p-3 border-gray-300 rounded-md w-60">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem est vitae fugiat sit quod velit voluptate sint.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- Our Team -->
+	<section class="bg-gray-100 py-5">
+		<div class="container p-2 sm:p-1 mx-auto my-10">
+			<div class="flex flex-col text-center mb-10">
+				<h3 class="text-2xl uppercase font-semibold text-gray-800">Our Team</h3>
+				<h5 class="text-gray-600">We have an amazing team</h5>
+			</div>
+			<div class="flex flex-wrap my-5 justify-center">
+				<div class="p-4 lg:w-1/4 md:w-1/2">
+					<div class="h-full flex flex-col items-center text-center">
+						<img alt="team" class="flex-shrink-0 rounded-lg w-60 md:w-full object-cover object-center mb-4" src="img/a.png">
+						<div class="w-full">
+							<h2 class="title-font font-medium text-lg text-gray-900">Name Surname</h2>
+							<h3 class="text-gray-500 text-sm mb-3">15 years of experience</h3>
+						</div>
+					</div>
+				</div>
+				<div class="p-4 lg:w-1/4 md:w-1/2">
+					<div class="h-full flex flex-col items-center text-center">
+						<img alt="team" class="flex-shrink-0 rounded-lg w-60 md:w-full object-cover object-center mb-4" src="img/b.png">
+						<div class="w-full">
+							<h2 class="title-font font-medium text-lg text-gray-900">Name Surname</h2>
+							<h3 class="text-gray-500 text-sm mb-3">15 years of experience</h3>
+						</div>
+					</div>
+				</div>
+				<div class="p-4 lg:w-1/4 md:w-1/2">
+					<div class="h-full flex flex-col items-center text-center">
+						<img alt="team" class="flex-shrink-0 rounded-lg w-60 md:w-full object-cover object-center mb-4" src="img/c.png">
+						<div class="w-full">
+							<h2 class="title-font font-medium text-lg text-gray-900">Name Surname</h2>
+							<h3 class="text-gray-500 text-sm mb-3">15 years of experience</h3>
+						</div>
+					</div>
+				</div>
+				<div class="p-4 lg:w-1/4 md:w-1/2">
+					<div class="h-full flex flex-col items-center text-center">
+						<img alt="team" class="flex-shrink-0 rounded-lg w-60 md:w-full object-cover object-center mb-4" src="img/d.png">
+						<div class="w-full">
+							<h2 class="title-font font-medium text-lg text-gray-900">Name Surname</h2>
+							<h3 class="text-gray-500 text-sm mb-3">15 years of experience</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Testimonials -->
+	<section class="text-gray-600 body-font">
+		<div class="container px-5 py-24 mx-auto">
+			<div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-blue-600 mb-8" viewBox="0 0 975.036 975.036">
+					<path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+				</svg>
+				<p class="leading-relaxed text-sm">
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam eaque esse provident eveniet quas possimus, fugit aliquam repellat doloribus tempora ullam quaerat explicabo eius officia voluptatibus, consectetur reprehenderit! Sit, beatae vel error voluptatibus nisi perspiciatis pariatur totam libero? Exercitationem et animi doloremque, facere officia cupiditate unde sit harum provident sunt ipsum minima porro aut esse sed ex. Iusto, nulla suscipit?
+				</p>
+				<span class="inline-block h-1 w-10 rounded bg-blue-600 mt-8 mb-6"></span>
+				<div class="flex justify-center items-center">
+					<div class="mx-2">
+						<img src="img/x.png" width="100" style="border-radius: 50%;">
+					</div>
+					<div class="mx-2">
+						<h2 class="text-gray-900 text-left font-medium title-font tracking-wider text-md">Joe Biden</h2>
+						<p class="text-gray-500 text-sm">Washington, USA</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="text-gray-600 body-font">
+    <hr class="w-full border-gray-200">
+    <div class="container px-5 py-20 mx-auto flex justify-between md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col ">
+      <div class="w-80 md:mx-0 mx-auto text-center md:text-left">
+        <a href="index.html" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+          <ion-icon name="construct-outline" size="large" class="text-blue-600"></ion-icon>
+          <span class="ml-3 text-xl font-semibold text-blue-600">Plumbing Service</span>
+        </a>
+        <p class="mt-2 text-sm text-gray-500 w-60 mx-auto md:w-auto">The best option for your problems ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="flex justify-between flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+        <div class="md:w-1/2 w-full px-16">
+          <h2 class="font-semibold text-gray-800 text-sm mb-3">SERVICES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a href="drainage.html" class="text-gray-500 text-sm hover:text-blue-600">Drainage Services</a>
+            </li>
+            <li>
+              <a href="water-supply.html" class="text-gray-500 text-sm hover:text-blue-600">Water Supply</a>
+            </li>
+            <li>
+              <a href="gas-plumbing.html" class="text-gray-500 text-sm hover:text-blue-600">Gas Plumbing</a>
+            </li>
+            <li>
+              <a href="mechanical.html" class="text-gray-500 text-sm hover:text-blue-600">Mechanical Services</a>
+            </li>
+          </nav>
+        </div>
+        <div class="md:w-1/2 w-full px-16">
+          <h2 class="font-semibold text-gray-800 text-sm mb-3">QUICK LINKS</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a href="about.html" class="text-gray-500 text-sm hover:text-blue-600">About us</a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-gray-500 text-sm hover:text-blue-600">Contact</a>
+            </li>
+            <li>
+              <a href="#!" class="text-gray-500 text-sm hover:text-blue-600">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#!" class="text-gray-500 text-sm hover:text-blue-600">Terms and Conditions</a>
+            </li>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-100">
+      <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+        <p class="text-gray-500 text-sm text-center sm:text-left">© <script>document.write(new Date().getFullYear())</script>   —
+          <a href="https://snworld.github.io" rel="noopener noreferrer" class="text-gray-600 ml-1 border-b border-gray-400" target="_blank">snworld</a>
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+          <a href="#!" class="text-gray-500">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a href="#!" class="ml-3 text-gray-500">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+            </svg>
+          </a>
+          <a href="#!" class="ml-3 text-gray-500">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js" integrity="sha512-Atu8sttM7mNNMon28+GHxLdz4Xo2APm1WVHwiLW9gW4bmHpHc/E2IbXrj98SmefTmbqbUTOztKl5PDPiu0LD/A==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.1/swiper-bundle.min.js" integrity="sha512-Co4mpV9xMZpn5vD4tluOo93jMpKMTp69cFLeTU0W6FksJVgaF4DY7CErLbMTQN/4FC47GBCheoIBY0vkRM9SJQ==" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html> 

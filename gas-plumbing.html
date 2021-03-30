@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="img/logo.svg">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.1/swiper-bundle.min.css" integrity="sha512-9jHQDsbLwicj+F+cW4hfD0UBCiLMfnFFN99OUMbt03OmhbeJptdEZbaeGnmFZ0jIoWtbFsEav3P3x9Ge9t4z5w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+  <title>Gas Plumbing</title>
+</head>
+<body>
+
+  <header class="text-gray-600 body-font my-2">
+    <div class="container px-2 sm:px-1 pt-2 pb-3 flex justify-between mx-auto">
+      <a href="#!" class="font-medium tex2t-sm hover:text-blue-600 transition duration-900 ease-in-out">+987654323</a>
+      <a href="#!" class="font-medium text-sm hover:text-blue-600 transition duration-900 ease-in-out">company@gmail.com</a>
+    </div>
+    <hr class="w-full border-gray-200">
+    <div class="container px-2 sm:px-1 mx-auto">
+      <div class="mx-auto flex flex-wrap justify-center lg:justify-between py-3 lg:py-0 flex-col lg:flex-row items-center">
+        <a href="index.html" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+          <ion-icon name="construct-outline" size="large" class="text-blue-600"></ion-icon>
+          <span class="ml-3 text-xl font-semibold text-blue-600">Plumbing Service</span>
+        </a>
+        <div class="flex flex-wrap justify-center lg:my-4">
+          <nav class="flex items-center text-base flex-col sm:flex-row">
+  
+            <div @click.away="open = false" class="relative" x-data="{ open: false }">
+              <button @click="open = !open" class="my-2 sm:my-1 uppercase mr-2 font-semibold text-sm text-blue-600 hover:text-blue-600 focus:outline-none">
+                Services
+                <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1 rotate-0"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </button>
+              <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute z-50 left-0 w-80 md:max-w-screen-sm md:w-screen mt-2 origin-top-left bg-white" style="display: none;">
+                <div class="origin-top-left absolute left-0 mt-2 w-auto rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                  <div class="py-1 hover:bg-gray-100">
+                    <a href="drainage.html" class="block px-4 pr-6 py-2 text-sm text-gray-700 font-medium hover:text-blue-800" role="menuitem">
+                      <ion-icon name="hammer-outline" class="inline-block mr-1" style="vertical-align: middle; font-size: 25px;"></ion-icon>
+                      Drainage Services
+                    </a> 
+                  </div>
+                   <div class="py-1 hover:bg-gray-100">
+                    <a href="water-supply.html" class="block px-4 pr-6 py-2 text-sm text-gray-700 font-medium hover:text-blue-800" role="menuitem">
+                      <ion-icon name="water-outline" class="inline-block mr-1" style="vertical-align: middle; font-size: 25px;"></ion-icon>
+                      Water Supply
+                    </a>
+                  </div>
+                  <div class="py-1 hover:bg-gray-100">
+                    <a href="gas-plumbing.html" class="block px-4 pr-6 py-2 text-sm text-gray-700 font-medium hover:text-blue-800" role="menuitem">
+                      <ion-icon name="build-outline" class="inline-block mr-1" style="vertical-align: middle; font-size: 25px;"></ion-icon>
+                      Gas Plumbing 
+                    </a>
+                  </div>
+                  <div class="py-1 hover:bg-gray-100">
+                    <a href="mechanical.html" class="block px-4 pr-6 py-2 text-sm text-gray-700 font-medium hover:text-blue-800" role="menuitem">
+                      <ion-icon name="settings-outline" class="inline-block mr-1" style="vertical-align: middle; font-size: 25px;"></ion-icon>
+                      Mechanical Services
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <a href="team.html" class="mx-5 my-2 sm:my-1 uppercase font-semibold text-sm text-dark-600 hover:text-blue-600">Team</a>
+            <a href="about.html" class="mx-5 my-2 sm:my-1 uppercase font-semibold text-sm text-dark-600 hover:text-blue-600">About</a>
+            <a href="contact.html" class="mx-5 my-2 sm:my-1 uppercase mr-8 font-semibold text-sm text-dark-600 hover:text-blue-600">Contact</a>
+            <button class="inline-flex items-center rounded-lg shadow-md bg-blue-600 text-white border-0 py-1 px-3 focus:outline-none hover:bg-blue-700 rounded text-base my-3 sm:my-2">
+              <a href="request.html">Request</a>
+            </button>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="text-gray-600 body-font">
+    <div class="flex flex-col text-center my-20 mb-0">
+      <h3 class="text-2xl uppercase font-semibold text-gray-800">Gas Plumbing</h3>
+      <h5 class="text-gray-500">Gas Line Installations and Repairs</h5>
+    </div>
+    <div class="container px-5 py-10 mb-16 mx-auto">
+      <div class="flex flex-col">
+        <div class="flex justify-between my-8 flex-col md:flex-row">
+          <img src="img/gas-2.jpg" alt="gas-plumbing" class="pr-0 md:pr-4 my-4 md:my-0 w-100 md:w-1/2">
+          <img src="img/gas.jpg" alt="gas-plumbing2" class="pl-0 md:pl-4 my-4 md:my-0 w-100 md:w-1/2">
+        </div>
+        <p class="text-gray-600 text-justify">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit consequuntur enim ullam porro harum minus id, earum necessitatibus eum nesciunt sunt, laudantium dolore laboriosam autem adipisci eius? Quisquam nisi facere quas blanditiis laudantium esse totam pariatur rerum eum, officiis soluta incidunt, enim dolor ducimus omnis expedita eaque vel unde non deleniti aliquam impedit consequatur. Nulla pariatur atque numquam earum consectetur suscipit sit accusamus reprehenderit molestias libero. Cum, dignissimos iure nobis ipsam, incidunt quo soluta error molestiae repellat, beatae ut fugit culpa totam! Repellendus, a voluptatum. Corporis enim quasi quos cumque labore debitis quisquam ab, sapiente id! Perspiciatis esse, illum quidem quam fuga voluptatibus corporis explicabo? Fuga dicta magnam excepturi est, perferendis dolor minus voluptates accusamus placeat beatae vel a cupiditate obcaecati deleniti numquam? Perspiciatis quia dolorem eligendi blanditiis. Ipsam dicta autem ipsa similique. Saepe omnis enim perferendis quibusdam nisi accusamus numquam temporibus sed, alias eaque hic sunt vitae incidunt nulla nobis molestias iusto voluptas culpa dolores odio architecto nostrum. Vel ullam magnam maxime harum quasi impedit libero amet delectus explicabo ad, quisquam eum voluptate deserunt nostrum, magni, cum molestiae quae vitae soluta cupiditate consequatur ut corporis illo. Accusamus perspiciatis impedit autem earum qui excepturi? Delectus vel porro maiores doloremque recusandae ullam eum quaerat soluta ipsum quam labore earum saepe hic repellat repudiandae omnis vitae, autem eaque perferendis, consequuntur qui sit dolorum. Neque, labore adipisci? Molestias magni a soluta laborum neque culpa totam ab adipisci quibusdam nesciunt, consectetur voluptates ipsa voluptatem omnis et ipsam, eum corporis dolorum quaerat. Officiis hic aspernatur non sed eius saepe, odit iste sit sint architecto quae expedita voluptatum vel quia unde nesciunt exercitationem blanditiis reiciendis. Voluptatem nihil culpa hic provident deserunt dolorem est officia neque inventore accusantium harum, dolorum veniam? Vel adipisci, totam fugit nisi nostrum nobis soluta debitis mollitia quos, incidunt deserunt consequatur enim quidem?
+        </p>
+      </div>
+      <div class="flex justify-end mt-10">
+        <button class="inline-flex items-center rounded-lg shadow-md bg-blue-600 text-white border-0 py-1 px-3 focus:outline-none hover:bg-blue-700 rounded text-base my-3 sm:my-2">
+          <a href="request.html">Request a Service</a>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-gray-600 body-font">
+    <hr class="w-full border-gray-200">
+    <div class="container px-5 py-20 mx-auto flex justify-between md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col ">
+      <div class="w-80 md:mx-0 mx-auto text-center md:text-left">
+        <a href="index.html" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+          <ion-icon name="construct-outline" size="large" class="text-blue-600"></ion-icon>
+          <span class="ml-3 text-xl font-semibold text-blue-600">Plumbing Service</span>
+        </a>
+        <p class="mt-2 text-sm text-gray-500 w-60 mx-auto md:w-auto">The best option for your problems ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="flex justify-between flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+        <div class="md:w-1/2 w-full px-16">
+          <h2 class="font-semibold text-gray-800 text-sm mb-3">SERVICES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a href="drainage.html" class="text-gray-500 text-sm hover:text-blue-600">Drainage Services</a>
+            </li>
+            <li>
+              <a href="water-supply.html" class="text-gray-500 text-sm hover:text-blue-600">Water Supply</a>
+            </li>
+            <li>
+              <a href="gas-plumbing.html" class="text-gray-500 text-sm hover:text-blue-600">Gas Plumbing</a>
+            </li>
+            <li>
+              <a href="mechanical.html" class="text-gray-500 text-sm hover:text-blue-600">Mechanical Services</a>
+            </li>
+          </nav>
+        </div>
+        <div class="md:w-1/2 w-full px-16">
+          <h2 class="font-semibold text-gray-800 text-sm mb-3">QUICK LINKS</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a href="about.html" class="text-gray-500 text-sm hover:text-blue-600">About us</a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-gray-500 text-sm hover:text-blue-600">Contact</a>
+            </li>
+            <li>
+              <a href="#!" class="text-gray-500 text-sm hover:text-blue-600">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#!" class="text-gray-500 text-sm hover:text-blue-600">Terms and Conditions</a>
+            </li>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-100">
+      <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+        <p class="text-gray-500 text-sm text-center sm:text-left">© <script>document.write(new Date().getFullYear())</script>   —
+          <a href="https://snworld.github.io" rel="noopener noreferrer" class="text-gray-600 ml-1 border-b border-gray-400" target="_blank">snworld</a>
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+          <a href="#!" class="text-gray-500">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a href="#!" class="ml-3 text-gray-500">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+            </svg>
+          </a>
+          <a href="#!" class="ml-3 text-gray-500">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js" integrity="sha512-Atu8sttM7mNNMon28+GHxLdz4Xo2APm1WVHwiLW9gW4bmHpHc/E2IbXrj98SmefTmbqbUTOztKl5PDPiu0LD/A==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.1/swiper-bundle.min.js" integrity="sha512-Co4mpV9xMZpn5vD4tluOo93jMpKMTp69cFLeTU0W6FksJVgaF4DY7CErLbMTQN/4FC47GBCheoIBY0vkRM9SJQ==" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html> 
